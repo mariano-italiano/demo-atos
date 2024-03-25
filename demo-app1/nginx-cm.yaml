@@ -1,0 +1,105 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: index-page
+data:
+  index.html: |
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Welcome to My Kubernetes World!</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f4f4;
+                overflow: hidden; /* to prevent horizontal scrolling */
+            }
+            header {
+                background-color: #326ce5;
+                color: #fff;
+                padding: 20px;
+                text-align: center;
+            }
+            h1 {
+                font-size: 36px;
+                margin-top: 0;
+            }
+            .container {
+                max-width: 800px;
+                margin: 20px auto;
+                padding: 0 20px;
+                position: relative;
+                animation: slideIn 2s ease-out;
+            }
+            .kubernetes-logo {
+                width: 150px;
+                height: auto;
+                margin: 20px auto;
+                display: block;
+                animation: fadeIn 2s ease-out;
+            }
+            .content {
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                animation: slideUp 2s ease-out;
+            }
+            .animation {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 20px;
+            }
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+            @keyframes slideIn {
+                from {
+                    transform: translateY(-100%);
+                }
+                to {
+                    transform: translateY(0);
+                }
+            }
+            @keyframes slideUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(100%);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Welcome to My Kubernetes World!</h1>
+        </header>
+        <div class="container">
+            <img class="kubernetes-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/1024px-Kubernetes_logo_without_workmark.svg.png" alt="Kubernetes Logo">
+            <div class="content">
+                        <h1>Welcome to my Kubernetes website!</h1>
+                <p>This is only example webpage coming from my containerized NGINX !</p>
+            </div>
+        </div>
+    </body>
+    </html>
