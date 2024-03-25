@@ -2,13 +2,15 @@
 
 ## Install NGINX Ingress
 
+```
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.7.1/deploy/static/provider/baremetal/deploy.yaml
-
+```
 
 ## Install ArgoCD
 
 Install ArgoCD:
 ```sh
+kubectl create ns argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 ```
 
