@@ -4,9 +4,6 @@ metadata:
   name: nginx-ingress
   namespace: nginx-app
   annotations:
-    alb.ingress.kubernetes.io/ssl-passthrough: "true"
-    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
-    nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
